@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #0a0a0e, #14141c, #1a1a26);
+}
+
+/* ヘッダー（統一） */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+nav a {
+    margin-left: 20px;
+    color: #cfcfcf;
+    text-decoration: none;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #f7c45a;
+}
+
+/* ヒーロー */
+.hero {
+    text-align: center;
+    padding: 120px 20px 80px;
+    background: radial-gradient(circle at center, #202029, #0d0d13 70%);
+}
+.hero h1 {
+    font-size: 2.8rem;
+}
+
+/* チームセクション */
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 60px 20px;
+}
+
+.member {
+    width: 240px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.07);
+    transition: 0.3s;
+}
+.member:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,0.08);
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.sns-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.sns-icons img {
+    width: 150px;   /* ← ここでアイコンの大きさ変更 */
+    height: 150px;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.sns-icons img:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}

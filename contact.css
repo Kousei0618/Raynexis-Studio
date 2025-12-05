@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #0a0a0e, #14141c, #1a1a26);
+}
+
+/* ヘッダー */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+nav a {
+    margin-left: 20px;
+    color: #cfcfcf;
+    text-decoration: none;
+}
+nav a:hover {
+    color: #f7c45a;
+}
+
+/* ヒーロー */
+.hero {
+    text-align: center;
+    padding: 120px 20px 80px;
+}
+
+/* フォーム */
+.contact-form {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px 100px;
+}
+
+form {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+form input, form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+}
+
+form button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #f7c45a;
+    color: #000;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+form button:hover {
+    background: #ffdb87;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 25px;
+    opacity: 0.6;
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.sns-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.sns-icons img {
+    width: 150px;   /* ← ここでアイコンの大きさ変更 */
+    height: 150px;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.sns-icons img:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>お問い合わせ - Reynexis Studio</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" type="image/jpg" href="images/Raynexis Studio.jpg">
+</head>
+<body>
+
+<header>
+    <div class="logo">Reynexis Studio</div>
+    <nav>
+        <a href="home.html">ホーム</a>
+        <a href="projects.html">プロジェクト</a>
+        <a href="team.html">チーム</a>
+        <a href="contact.html">お問い合わせ</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>お問い合わせ</h1>
+    <p>質問・依頼・提案などお気軽にご連絡ください。</p>
+</section>
+
+<div class="contact-form">
+<form id="contact-form">
+    <input type="text" id="name" placeholder="お名前" required>
+    <input type="email" id="email" placeholder="メールアドレス" required>
+    <textarea id="message" placeholder="お問い合わせ内容" required></textarea>
+    <button type="submit">送信</button>
+</form>
+</div>
+
+<p id="resultMessage" style="margin-top:15px; text-align:center;"></p>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const res = await fetch("http://localhost:3000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message })
+    });
+
+    const data = await res.json();
+
+    document.getElementById("resultMessage").textContent = data.message;
+});
+</script>
+
+    <footer>
+    <div class="sns-icons">
+        <a href="https://twitter.com/あなたのID" target="_blank">
+            <img src="images/xicon.png" alt="Twitter">
+        </a>
+        <a href="https://discord.gg/eMvxCSQdEf" target="_blank">
+            <img src="images/discordicon.png" alt="Discord">
+        </a>
+    </div>
+    <p>© 2025 Reynexis Studio</p>
+</footer>
+</body>
+</html>
